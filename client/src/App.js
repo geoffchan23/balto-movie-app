@@ -22,7 +22,7 @@ const yearsList = (() => {
 
 function App() {
   const [movieList, setMovieList] = useState([])
-  const [searchQuery, updateSearchQuery] = useState('geoff')
+  const [searchQuery, updateSearchQuery] = useState('superman')
   const [yearQuery, updateYearQuery] = useState('')
   const [loaderOpen, setLoaderOpen] = useState(false)
 
@@ -30,7 +30,7 @@ function App() {
     (async function() {
       try {
         setLoaderOpen(true)
-        const data = await (await fetch(`${apiUrl}/movies?title=geoff`)).json()
+        const data = await (await fetch(`${apiUrl}/movies?title=superman`)).json()
         setMovieList(data.movies)
         setLoaderOpen(false)
       } catch(e) {
